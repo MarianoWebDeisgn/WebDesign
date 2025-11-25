@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Currículo - João Victor Mariano</title>
+
+<style>
+    :root {
+        --roxo: #7a22ff;
+        --roxo-escuro: #5e18cc;
+        --branco: #ffffff;
+        --cinza-claro: #f4f4f4;
+        --cinza: #dcdcdc;
+        --texto: #333;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: var(--cinza-claro);
+        color: var(--texto);
+        display: flex;
+        height: 100vh;
+    }
+
+    /* ---------- LATERAL ---------- */
+    .sidebar {
+        width: 260px;
+        background: var(--roxo);
+        color: var(--branco);
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .sidebar h2 {
+        font-size: 23px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .menu a {
+        color: var(--branco);
+        text-decoration: none;
+        padding: 12px 15px;
+        border-radius: 8px;
+        display: block;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+    .menu a:hover {
+        background: var(--roxo-escuro);
+        transform: translateX(5px);
+    }
+
+    /* ---------- CONTEÚDO ---------- */
+    .content {
+        flex: 1;
+        padding: 50px;
+        overflow-y: auto;
+    }
+
+    .titulo {
+        font-size: 45px;
+        font-weight: 800;
+        color: var(--roxo);
+        margin-bottom: 0;
+    }
+
+    .subtitulo {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .sessao {
+        margin-top: 50px;
+    }
+
+    .linha {
+        width: 90px;
+        height: 5px;
+        background: var(--roxo);
+        border-radius: 5px;
+        margin: 10px 0 25px 0;
+    }
+
+    /* ---------- LISTAS ---------- */
+    .lista {
+        list-style: none;
+        margin-top: 10px;
+    }
+
+    .lista li {
+        margin-bottom: 10px;
+        padding-left: 15px;
+        border-left: 4px solid var(--roxo);
+    }
+
+    /* ---------- BARRAS DE PROGRESSO ---------- */
+    .skill {
+        margin-bottom: 20px;
+    }
+
+    .skill span {
+        font-weight: 600;
+    }
+
+    .barra {
+        width: 100%;
+        height: 10px;
+        background: var(--cinza);
+        border-radius: 5px;
+        margin-top: 5px;
+        overflow: hidden;
+    }
+
+    .progresso {
+        height: 10px;
+        background: var(--roxo);
+        width: 0; /* animado via JS */
+        transition: width 1s;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h2>João Victor<br>Mariano</h2>
+
+    <div class="menu">
+        <a href="#sobre">Sobre Mim</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#contato">Contato</a>
+    </div>
+</div>
+
+<!-- CONTEÚDO -->
+<div class="content">
+    
+    <h1 class="titulo">Olá! Eu sou João Victor</h1>
+    <p class="subtitulo">Estudante de Engenharia da Computação</p>
+
+    <div class="linha"></div>
+
+    <!-- SOBRE -->
+    <div class="sessao" id="sobre">
+        <h2>Sobre Mim</h2>
+        <div class="linha"></div>
+        <p>
+            Fazer parte do time de T.I da Águas Cuiaba para mim é motivo de orgulho e gratidão. Cada projeto entregue, cada problema resolvido, reforça a certeza de que estou no lugar certo, fazendo o que amo. Rodeado por um time que valoriza o crescimento e a inovação. Sentir a constante evolução junto com a empresa é a sensação de estar contribuindo com algo maior faz tudo valer a pena.
+        </p>
+    </div>
+
+    <!-- EXPERIENCIA -->
+    <div class="sessao" id="experiencia">
+        <h2>Experiência</h2>
+        <div class="linha"></div>
+
+        <ul class="lista">
+            <li>
+                <strong>Assistente de T.I</strong> — Águas Cuiabá S.A -  (2025 - Atual)
+                <br>Com muito orgulho no peito, faço parte do time de T.I da Águas Cuiabá, assumindo a missão de integrar a equipe responsável por prestar suporte a operação de Cuiabá, e ao lado dos melhores, construir um ambiente de evolução constante e foco na entrega de um serviço de qualidade.
+            </li>
+
+            <li>
+                <strong>Assistente de T.I</strong> — Igua MT coparticipações - (2024-2025)
+                <br>Vestindo a camisa da Iguá Saneamento, carrego comigo a responsabilidade de representar a empresa e me esforçar para ser sempre o melhor possível, prestando suporte técnico aos usuários, gerenciamento de ativos e usuários via Active Directory e gestão de chamados via ServiceNow
+            </li>
+
+            <li>
+                <strong>Jovem Aprendiz T.I</strong> — Águas Cuiabá S.A -  (2022 - 2024)
+                <br>Durante meu tempo fazendo parte da Águas Cuiabá, passei por diversas
+situações que fortaleceram meus conhecimentos e acrescentaram na
+minha bagagem intelectual, desenvolvi habilidades com softwares de
+gerenciamento de servidores, Active Directory, Atendimento ao usuário,
+Suporte técnico e mais.
+            </li>
+        </ul>
+    </div>
+
+    <!-- HABILIDADES -->
+    <div class="sessao" id="habilidades">
+        <h2>Habilidades</h2>
+        <div class="linha"></div>
+
+        <div class="skill">
+            <span>HTML</span>
+            <div class="barra"><div class="progresso" data-width="92%"></div></div>
+        </div>
+
+        <div class="skill">
+            <span>CSS</span>
+            <div class="barra"><div class="progresso" data-width="84%"></div></div>
+        </div>
+
+        <div class="skill">
+            <span>JavaScript</span>
+            <div class="barra"><div class="progresso" data-width="76%"></div></div>
+        </div>
+
+        <div class="skill">
+            <span>Python</span>
+            <div class="barra"><div class="progresso" data-width="80%"></div></div>
+        </div>
+
+    </div>
+
+    <!-- CONTATO -->
+    <div class="sessao" id="contato">
+        <h2>Contato</h2>
+        <div class="linha"></div>
+
+        <p><strong>Localização:</strong> Cuiabá - MT</p>
+        <p><strong>Telefone:</strong> (64) 9 9344-5385</p>
+        <p><strong>Email:</strong> joaovictormariano55@gmail.com</p>
+        <p><strong>LinkedIn:</strong>
+            <a href="https://www.linkedin.com/in/joão-victor-mariano-de-souza-camargo-a09709248" target="_blank">
+                https://www.linkedin.com/in/joão-victor-mariano-de-souza-camargo-a09709248
+            </a>
+        </p>
+    </div>
+
+</div>
+
+<script>
+    // Animação das barras de progresso ao carregar
+    window.onload = () => {
+        const barras = document.querySelectorAll(".progresso");
+        barras.forEach(b => {
+            b.style.width = b.getAttribute("data-width");
+        });
+    };
+</script>
+
+</body>
+</html>
